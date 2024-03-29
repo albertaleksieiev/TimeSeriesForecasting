@@ -14,16 +14,8 @@ from chronos import ChronosPipeline
 matplotlib.use('Agg')
 app = Flask(__name__)
 
-with open('config.json', 'r') as config_file:
-    config = json.load(config_file)
-
-# Binance API keys (replace these with your actual API keys)
-api_key = config['api_key']
-api_secret = config['api_secret']
-
 # Create a Binance client
-client = Client(api_key, api_secret)
-
+client = Client("", "")
 
 # Function to fetch historical prices
 def fetch_historical_prices(symbol, start_str, end_str, interval_code):

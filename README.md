@@ -1,7 +1,7 @@
 # Binance time series forecasting
-![Cryptocurrency Price Prediction Platform](assets/main.png)
+![](assets/main.png)
 
-Welcome to our Binance Price Prediction demo, a humble showcase leveraging `amazon-science/chronos-forecasting` for time series forecasting. This demo provides a glimpse into the Chronos model's capabilities by fetching and forecasting cryptocurrency prices from Binance.
+Welcome to Binance Price Prediction demo, a humble showcase leveraging `amazon-science/chronos-forecasting` for time series forecasting. This demo provides a glimpse into the Chronos model's capabilities by fetching and forecasting cryptocurrency prices from Binance.
 
 ## Features
 
@@ -13,19 +13,6 @@ This demo allows users to interact with the platform to customize their predicti
 - **Predictions Length**: Determine the number of future data points you wish to forecast.
 - **Time Window**: Set the time interval for each data point (e.g., 30 minutes, 1 hour).
 
-## Configuration
-
-For this demo, you need to specify your Binance API keys in the `config.json` file to fetch the price data.
-
-Here's a sample of what your `config.json` should look like:
-
-```json
-{
-  "binance_api_key": "YOUR_BINANCE_API_KEY",
-  "binance_secret_key": "YOUR_BINANCE_SECRET_KEY"
-}
-```
-
 ## About Chronos Forecasting
 
 Chronos stands as an innovative approach to time series forecasting, utilizing language model architectures. It transforms a time series into a sequence of tokens through scaling and quantization.
@@ -35,6 +22,20 @@ A language model is then trained on these tokens with a cross-entropy loss funct
 ## Probabilistic Forecasts
 
 This demo generates probabilistic forecasts by simulating multiple future trajectories with the historical data provided, offering a useful tool for understanding the uncertainty in predictions.
+
+## Challenges
+
+
+![](assets/Challenge.png)
+![](assets/Challenge2.png)
+According to chronos paper, model struggles with exponential tasks. And it underestimate the trend when the context is not sufficiently long, what is shown on pictures below.
+
+![](assets/Graph.jpg)
+'Just a time series'
+
+![](assets/ReapeatGraph.jpg)
+'Just a time series' 4 times.
+
 
 ## Disclaimer
 
